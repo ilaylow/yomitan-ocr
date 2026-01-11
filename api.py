@@ -29,7 +29,7 @@ class OCRResponse(BaseModel):
     words: list[DetectedWord]
 
 
-@app.post("/ocr", response_model=OCRResponse)
+@app.post("/yomitan/ocr", response_model=OCRResponse)
 async def process_image(file: UploadFile = File(...)):
     """
     Process an uploaded image and return detected text with confidence scores.
