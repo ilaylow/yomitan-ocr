@@ -8,8 +8,8 @@ import cv2
 app = FastAPI(title="OCR API", description="API for detecting text in images")
 
 # Model paths
-det_path = "/Users/chuenleylow/Downloads/onnx-test/ppocrv5_det.onnx"
-rec_path = "/Users/chuenleylow/Downloads/onnx-test/ppocrv5_rec.onnx"
+det_path = "ppocrv5_det.onnx"
+rec_path = "ppocrv5_rec.onnx"
 dict_path = hf_hub_download("monkt/paddleocr-onnx", "languages/chinese/dict.txt")
 
 # Initialize OCR model
