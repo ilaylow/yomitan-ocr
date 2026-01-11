@@ -46,7 +46,7 @@ class OCRResponse(BaseModel):
     words: list[DetectedWord]
 
 
-@app.post("/yomitan/ocr")
+@app.post("/yomitan/ocr/")
 async def process_image(file: UploadFile = File(...)):
     """
     Process an uploaded image and return detected text with confidence scores.
